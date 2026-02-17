@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INETL 2025 Output - Shiny App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://shinyapps.io/favicon.ico" type="image/x-icon"> <!-- Optional: Shiny favicon -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>INETL 2025</h1>
+            </div>
+            <ul>
+                <li><a href="#app">App</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to INETL 2025 Output</h2>
+            <p>Explore interactive data visualizations and outputs from the INETL 2025 project. Built with Shiny for R.</p>
+        </section>
+
+        <section id="app">
+            <h3>Interactive Shiny App</h3>
+            <p>Interact with the app below. It loads directly from Shinyapps.io.</p>
+            <iframe src="https://inetl2025.shinyapps.io/output/" width="100%" height="700px" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="about">
+            <h3>About This App</h3>
+            <p>This Shiny application provides outputs and visualizations for the INETL 2025 initiative. It's hosted on Shinyapps.io for easy access and embedding.</p>
+            <ul>
+                <li>Built with R and Shiny.</li>
+                <li>Features interactive plots and data exploration.</li>
+                <li>Publicly accessible for collaboration.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h3>Contact</h3>
+            <p>For questions or feedback, reach out via email: your-email@example.com</p>
+            <p>Learn more at <a href="https://shinyapps.io" target="_blank">Shinyapps.io</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 INETL 2025. Powered by Shiny and R. Hosted on Shinyapps.io.</p>
+    </footer>
+
+    <script>
+        // Optional: Simple loading animation for the iframe
+        const iframe = document.querySelector('iframe');
+        iframe.onload = function() {
+            console.log('Shiny app loaded successfully!');
+        };
+    </script>
+</body>
+</html>
