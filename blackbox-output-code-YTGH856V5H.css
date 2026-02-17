@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Global Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,63 +10,75 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
+    font-size: 16px;
 }
 
-/* Header and Navigation */
+/* Header Styles */
 header {
     background-color: #007bff;
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo h1 {
-    font-size: 1.5rem;
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffd700;
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
 }
 
-/* Main Content */
+/* Main Content Styles */
 main {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #hero {
     text-align: center;
-    margin-bottom: 40px;
+    background-color: #e9ecef;
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 #hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
 }
 
 #hero p {
@@ -74,43 +86,68 @@ main {
     color: #666;
 }
 
-section {
-    margin-bottom: 40px;
-}
-
 section h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    color: #007bff;
     border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
 }
 
 iframe {
-    display: block;
-    margin: 20px 0;
+    width: 100%;
+    height: 700px;
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
 }
 
-/* Footer */
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 40px;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
+    header h1 {
+        font-size: 1.5rem;
     }
     nav ul {
-        margin-top: 10px;
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    main {
+        padding: 0.5rem;
     }
     iframe {
-        height: 500px; /* Adjust for mobile */
+        height: 500px;
+    }
+    section {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    iframe {
+        height: 400px;
     }
 }

@@ -4,15 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INETL 2025 Output - Shiny App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://shinyapps.io/favicon.ico" type="image/x-icon"> <!-- Optional: Shiny favicon -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 0 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            iframe {
+                height: 500px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>INETL 2025 Output</h1>
         <nav>
-            <div class="logo">
-                <h1>INETL 2025</h1>
-            </div>
             <ul>
                 <li><a href="#app">App</a></li>
                 <li><a href="#about">About</a></li>
@@ -24,42 +90,34 @@
     <main>
         <section id="hero">
             <h2>Welcome to INETL 2025 Output</h2>
-            <p>Explore interactive data visualizations and outputs from the INETL 2025 project. Built with Shiny for R.</p>
+            <p>Explore interactive data visualizations and outputs from the INETL 2025 project. This app is built with Shiny for R and hosted on Shinyapps.io.</p>
         </section>
 
         <section id="app">
             <h3>Interactive Shiny App</h3>
-            <p>Interact with the app below. It loads directly from Shinyapps.io.</p>
-            <iframe src="https://inetl2025.shinyapps.io/output/" width="100%" height="700px" frameborder="0" allowfullscreen></iframe>
+            <p>Interact with the app below. If it doesn't load, <a href="https://inetl2025.shinyapps.io/output/" target="_blank">click here to view it directly</a>.</p>
+            <iframe src="https://inetl2025.shinyapps.io/output/" allowfullscreen></iframe>
         </section>
 
         <section id="about">
             <h3>About This App</h3>
-            <p>This Shiny application provides outputs and visualizations for the INETL 2025 initiative. It's hosted on Shinyapps.io for easy access and embedding.</p>
+            <p>This Shiny application provides outputs and visualizations for the INETL 2025 initiative.</p>
             <ul>
-                <li>Built with R and Shiny.</li>
-                <li>Features interactive plots and data exploration.</li>
-                <li>Publicly accessible for collaboration.</li>
+                <li>Built with R and Shiny for interactive data exploration.</li>
+                <li>Features dynamic plots and user inputs.</li>
+                <li>Publicly accessible for collaboration and sharing.</li>
             </ul>
         </section>
 
         <section id="contact">
             <h3>Contact</h3>
-            <p>For questions or feedback, reach out via email: your-email@example.com</p>
-            <p>Learn more at <a href="https://shinyapps.io" target="_blank">Shinyapps.io</a>.</p>
+            <p>For questions or feedback, email: your-email@example.com</p>
+            <p>More info: <a href="https://shinyapps.io" target="_blank">Shinyapps.io</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 INETL 2025. Powered by Shiny and R. Hosted on Shinyapps.io.</p>
+        <p>&copy; 2023 INETL 2025. Powered by Shiny and R.</p>
     </footer>
-
-    <script>
-        // Optional: Simple loading animation for the iframe
-        const iframe = document.querySelector('iframe');
-        iframe.onload = function() {
-            console.log('Shiny app loaded successfully!');
-        };
-    </script>
 </body>
 </html>
